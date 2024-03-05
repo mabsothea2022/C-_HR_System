@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{782ADDC6-198A-4ED4-BF93-ACCDB8E23AC3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HR_System</RootNamespace>
+    <AssemblyName>HR-System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionMB.cs" />
+    <Compile Include="Message\FDel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message\FDel.Designer.cs">
+      <DependentUpon>FDel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FrmDeleteData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FrmDeleteData.Designer.cs">
+      <DependentUpon>FrmDeleteData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insert\FrmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insert\FrmEmployee.Designer.cs">
+      <DependentUpon>FrmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FrmListEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FrmListEmp.Designer.cs">
+      <DependentUpon>FrmListEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FrmSearchem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FrmSearchem.Designer.cs">
+      <DependentUpon>FrmSearchem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FrmSkill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FrmSkill.Designer.cs">
+      <DependentUpon>FrmSkill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HRDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportEmp.Designer.cs">
+      <DependentUpon>ReportEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rListEmp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rListEmp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ShowFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowFile.Designer.cs">
+      <DependentUpon>ShowFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMgt\FrmCapture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMgt\FrmCapture.Designer.cs">
+      <DependentUpon>FrmCapture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMgt\FrmCreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMgt\FrmCreateUser.Designer.cs">
+      <DependentUpon>FrmCreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMgt\FrmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMgt\FrmLogIn.Designer.cs">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMgt\FrmResetPW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMgt\FrmResetPW.Designer.cs">
+      <DependentUpon>FrmResetPW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMgt\FrmUserMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMgt\FrmUserMgt.Designer.cs">
+      <DependentUpon>FrmUserMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insert\FrmRegUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insert\FrmRegUser.Designer.cs">
+      <DependentUpon>FrmRegUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HRDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MainBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainBoard.Designer.cs">
+      <DependentUpon>MainBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message\MsExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message\MsExit.Designer.cs">
+      <DependentUpon>MsExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Message\FDel.resx">
+      <DependentUpon>FDel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FrmDeleteData.resx">
+      <DependentUpon>FrmDeleteData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insert\FrmEmployee.resx">
+      <DependentUpon>FrmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FrmListEmp.resx">
+      <DependentUpon>FrmListEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FrmSearchem.resx">
+      <DependentUpon>FrmSearchem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FrmSkill.resx">
+      <DependentUpon>FrmSkill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportEmp.resx">
+      <DependentUpon>ReportEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rListEmp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rListEmp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowFile.resx">
+      <DependentUpon>ShowFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMgt\FrmCapture.resx">
+      <DependentUpon>FrmCapture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMgt\FrmCreateUser.resx">
+      <DependentUpon>FrmCreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMgt\FrmLogIn.resx">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMgt\FrmResetPW.resx">
+      <DependentUpon>FrmResetPW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMgt\FrmUserMgt.resx">
+      <DependentUpon>FrmUserMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insert\FrmRegUser.resx">
+      <DependentUpon>FrmRegUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainBoard.resx">
+      <DependentUpon>MainBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message\MsExit.resx">
+      <DependentUpon>MsExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="HRDataSet.xsc">
+      <DependentUpon>HRDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HRDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HRDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HRDataSet.xss">
+      <DependentUpon>HRDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HRDataSet1.xsc">
+      <DependentUpon>HRDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HRDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HRDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HRDataSet1.xss">
+      <DependentUpon>HRDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="HR.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

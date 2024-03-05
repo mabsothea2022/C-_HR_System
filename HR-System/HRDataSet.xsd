@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HRDataSet" targetNamespace="http://tempuri.org/HRDataSet.xsd" xmlns:mstns="http://tempuri.org/HRDataSet.xsd" xmlns="http://tempuri.org/HRDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HRConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HRConnectionString (Settings)" PropertyReference="ApplicationSettings.HR_System.Properties.Settings.GlobalReference.Default.HRConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="QListEmpTableAdapter" GeneratorDataComponentClassName="QListEmpTableAdapter" Name="QListEmp" UserDataComponentName="QListEmpTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HRConnectionString (Settings)" DbObjectName="QListEmp" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        QListEmp.*
+FROM            QListEmp</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EmpID" DataSetColumn="EmpID" />
+              <Mapping SourceColumn="FullNameKh" DataSetColumn="FullNameKh" />
+              <Mapping SourceColumn="FullNameEN" DataSetColumn="FullNameEN" />
+              <Mapping SourceColumn="ESex" DataSetColumn="ESex" />
+              <Mapping SourceColumn="EDOB" DataSetColumn="EDOB" />
+              <Mapping SourceColumn="OGID" DataSetColumn="OGID" />
+              <Mapping SourceColumn="OGName" DataSetColumn="OGName" />
+              <Mapping SourceColumn="PTID" DataSetColumn="PTID" />
+              <Mapping SourceColumn="PTName" DataSetColumn="PTName" />
+              <Mapping SourceColumn="Address" DataSetColumn="Address" />
+              <Mapping SourceColumn="PVJ" DataSetColumn="PVJ" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="HRDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="HRDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="HRDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="QListEmp" msprop:Generator_RowEvHandlerName="QListEmpRowChangeEventHandler" msprop:Generator_RowDeletedName="QListEmpRowDeleted" msprop:Generator_RowDeletingName="QListEmpRowDeleting" msprop:Generator_RowEvArgName="QListEmpRowChangeEvent" msprop:Generator_TablePropName="QListEmp" msprop:Generator_RowChangedName="QListEmpRowChanged" msprop:Generator_RowChangingName="QListEmpRowChanging" msprop:Generator_TableClassName="QListEmpDataTable" msprop:Generator_RowClassName="QListEmpRow" msprop:Generator_TableVarName="tableQListEmp" msprop:Generator_UserTableName="QListEmp">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EmpID" msprop:Generator_ColumnPropNameInRow="EmpID" msprop:Generator_ColumnPropNameInTable="EmpIDColumn" msprop:Generator_ColumnVarNameInTable="columnEmpID" msprop:Generator_UserColumnName="EmpID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FullNameKh" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="FullNameKh" msprop:Generator_ColumnPropNameInTable="FullNameKhColumn" msprop:Generator_ColumnVarNameInTable="columnFullNameKh" msprop:Generator_UserColumnName="FullNameKh" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FullNameEN" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="FullNameEN" msprop:Generator_ColumnPropNameInTable="FullNameENColumn" msprop:Generator_ColumnVarNameInTable="columnFullNameEN" msprop:Generator_UserColumnName="FullNameEN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESex" msprop:Generator_ColumnPropNameInRow="ESex" msprop:Generator_ColumnPropNameInTable="ESexColumn" msprop:Generator_ColumnVarNameInTable="columnESex" msprop:Generator_UserColumnName="ESex" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EDOB" msprop:Generator_ColumnPropNameInRow="EDOB" msprop:Generator_ColumnPropNameInTable="EDOBColumn" msprop:Generator_ColumnVarNameInTable="columnEDOB" msprop:Generator_UserColumnName="EDOB" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OGID" msprop:Generator_ColumnPropNameInRow="OGID" msprop:Generator_ColumnPropNameInTable="OGIDColumn" msprop:Generator_ColumnVarNameInTable="columnOGID" msprop:Generator_UserColumnName="OGID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OGName" msprop:Generator_ColumnPropNameInRow="OGName" msprop:Generator_ColumnPropNameInTable="OGNameColumn" msprop:Generator_ColumnVarNameInTable="columnOGName" msprop:Generator_UserColumnName="OGName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PTID" msprop:Generator_ColumnPropNameInRow="PTID" msprop:Generator_ColumnPropNameInTable="PTIDColumn" msprop:Generator_ColumnVarNameInTable="columnPTID" msprop:Generator_UserColumnName="PTID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PTName" msprop:Generator_ColumnPropNameInRow="PTName" msprop:Generator_ColumnPropNameInTable="PTNameColumn" msprop:Generator_ColumnVarNameInTable="columnPTName" msprop:Generator_UserColumnName="PTName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_UserColumnName="Address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PVJ" msprop:Generator_ColumnPropNameInRow="PVJ" msprop:Generator_ColumnPropNameInTable="PVJColumn" msprop:Generator_ColumnVarNameInTable="columnPVJ" msprop:Generator_UserColumnName="PVJ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

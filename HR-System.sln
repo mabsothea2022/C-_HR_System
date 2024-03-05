@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR-System", "HR-System\HR-System.csproj", "{782ADDC6-198A-4ED4-BF93-ACCDB8E23AC3}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "..\Setup1\Setup1.vdproj", "{E93D2EB4-55FD-465A-9464-9EDD66E68329}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{782ADDC6-198A-4ED4-BF93-ACCDB8E23AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{782ADDC6-198A-4ED4-BF93-ACCDB8E23AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{782ADDC6-198A-4ED4-BF93-ACCDB8E23AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{782ADDC6-198A-4ED4-BF93-ACCDB8E23AC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E93D2EB4-55FD-465A-9464-9EDD66E68329}.Debug|Any CPU.ActiveCfg = Debug
+		{E93D2EB4-55FD-465A-9464-9EDD66E68329}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8ED3796C-CF54-4067-A50A-34AF778A46F5}
+	EndGlobalSection
+EndGlobal
